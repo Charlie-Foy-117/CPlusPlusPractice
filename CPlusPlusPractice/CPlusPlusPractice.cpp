@@ -5,7 +5,17 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int testInt = 0;
+    float testFloat = 0.5f;
+    bool testBool = true;
+    char testChar = 'C';
+
+    std::cout << "Hello World!" << std::endl
+        << testInt << std::endl
+        << testFloat << std::endl
+        << testBool << std::endl
+        << testChar << std::endl;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
