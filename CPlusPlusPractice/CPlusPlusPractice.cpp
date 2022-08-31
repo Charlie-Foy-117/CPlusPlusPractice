@@ -14,17 +14,91 @@ int main()
     bool testBool = true;
     char testChar = 'C';
 
-    std::string testString = "Hiya";
+    char firstNameOld[] = "Charlie";
+
+    float result = 70.0f / 100;
+
+    std::string firstName = "Charlie";
+    std::string lastName = "Foy";
+
+    //can add strings together with +
+    std::string fullName = firstName + " " + lastName;
+
+    //can access characters in string as if string was array
+    char firstInitial = fullName[0];
+
+    //Substr splits the string based on an initial position and a length
+    std::string initials = fullName.substr(0 , 1);
+
+    //you can find the position in the string and store it in variable of type std::size_t similar to int
+    std::size_t spacePos = fullName.find(" ");
+
+    //we can use the postion to get the next substr
+    initials += fullName.substr(spacePos + 1, 1);
+
+
+
+
+
+    //problem question
+    std::string paragraph = "Whether we wanted it or not, we've stepped into a war with the Cabal on Mars.";
+    std::string twentyChars = paragraph.substr(0, 20);
+    std::string restOfChars = twentyChars + "\n";
+    restOfChars += paragraph.substr(20, std::string::npos);
 
     //example of output to console
-    std::cout << "Hello World!" << std::endl
-        << testInt << std::endl
-        << testUnsigned << std::endl
-        << testFloat << std::endl
-        << testDouble << std::endl
-        << testBool << std::endl
-        << testChar << std::endl
-        << testString << std::endl;
+    //std::cout << restOfChars << std::endl;
+
+
+
+    //input
+    /*std::cout << "Please enter a word" << std::endl;
+    std::string entryString;
+
+    //std::cin >> is used to gather input. the result of the console input is stored in the variable to the right
+    std::cin >> entryString;
+
+    std::cout << "You typed " << entryString << "!" << std::endl;
+
+    //we can also input two things that arent strings
+    int entryInt;
+    std::cout << "Please enter a whole number" << std::endl;
+    std::cin >> entryInt;
+    std::cout << "You typed " << entryInt << std::endl;
+
+    //NOTE: if they enter something other than an int
+    //the input will not "consume" the entry
+    //this means it will be used again the next time
+    //that cin is used breaking your program
+    //we should use data validation
+
+    float entryFloat;
+    std::cout << "Please enter a decimal number" << std::endl;
+    std::cin >> entryFloat;
+    std::cout << "You typed " << entryFloat << std::endl;
+
+    std::string lineOfText;
+    std::cout << "Please enter a sentence" << std::endl;
+    std::getline(std::cin, lineOfText);
+    std::cout << "You typed " << lineOfText << std::endl;*/
+
+
+    //selection
+    bool decision = true;
+    if (decision)
+    {
+        std::cout << "Decision was true" << std::endl;
+    }
+    else
+    {
+        std::cout << "Decision was false" << std::endl;
+    }
+
+    //advanced if statements :Ternary
+    //written inline with other code, such as an assignment
+    //it results in one of two values based on conditions
+
+    int ternResult = decision ? 1 : 2;
 
 }
 
