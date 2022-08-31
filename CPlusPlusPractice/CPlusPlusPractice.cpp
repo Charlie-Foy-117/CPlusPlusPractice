@@ -2,19 +2,29 @@
 //
 
 #include <iostream>
+#include <string>
 
 int main()
 {
+    //examples of different variables
     int testInt = 0;
+    unsigned testUnsigned = 100u;
     float testFloat = 0.5f;
+    double testDouble = 0.5;
     bool testBool = true;
     char testChar = 'C';
 
+    std::string testString = "Hiya";
+
+    //example of output to console
     std::cout << "Hello World!" << std::endl
         << testInt << std::endl
+        << testUnsigned << std::endl
         << testFloat << std::endl
+        << testDouble << std::endl
         << testBool << std::endl
-        << testChar << std::endl;
+        << testChar << std::endl
+        << testString << std::endl;
 
 }
 
